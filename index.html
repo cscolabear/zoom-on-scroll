@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>zoom-on-scroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./cover.jpg" class="headerImg">
+        <h1 class="headerTitle">zoom on scroll</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2 class="article-title">China Concealed Extent of Virus Outbreak, U.S. Intelligence Says</h2>
+            <p>April 1, 2020, 11:15 PM GMT+8 Updated on April 2, 2020, 9:08 AM GMT+8</p>
+            <p>**test for desktop</p>
+            <section>
+                <div class="sticky">
+                    <img src="./1400x-1-01.jpg" class="stickyImg">
+                    <span class="stickyInfo">relates to China Concealed Extent of Virus Outbreak, U.S. Intelligence
+                        Says</span>
+                </div>
+
+                <p>
+                    China has concealed the extent of the coronavirus outbreak in its country, under-reporting both
+                    total cases and deaths it’s suffered from the disease, the U.S. intelligence community concluded
+                    in
+                    a classified report to the White House, according to three U.S. officials.<br>
+
+                    The officials asked not to be identified because the report is secret, and they declined to
+                    detail
+                    its contents. But the thrust, they said, is that China’s public reporting on cases and deaths is
+                    intentionally incomplete. Two of the officials said the report concludes that China’s numbers
+                    are
+                    fake.<br>
+
+                    The report was received by the White House last week, one of the officials said.
+                </p>
+
+                <p>
+                    China Seals Borders to Most Foreigners Starting Saturday
+                    Airport employees wear full body protective suits at Pudong International Airport in Shanghai on
+                    March
+                    28.Photographer: Qilai Shen/Bloomberg
+                    The outbreak began in China’s Hubei province in late 2019, but the country has publicly reported
+                    only
+                    about 82,000 cases and 3,300 deaths, according to data compiled by Johns Hopkins University.
+                    That
+                    compares to more than 189,000 cases and more than 4,000 deaths in the U.S., which has the
+                    largest
+                    publicly reported outbreak in the world.
+                </p>
+            </section>
+
+
+            <p>
+                U.S. President Donald Trump said Wednesday that China’s reported virus data appear to be on the
+                "light
+                side" but that he hadn’t received an intelligence report saying the country had concealed the
+                extent of
+                its outbreak.<br>
+
+                "Their numbers seem to be a little bit on the light side, and I’m being nice when I say that,"
+                he said
+                at a daily coronavirus briefing at the White House.
+            </p>
+            <p>
+                Trump added that the U.S. and China were in constant communication and that Beijing would spend
+                $250 billion to purchase American products. "We’d like to keep it, they’d like to keep it" he
+                said of the U.S.-China trade deal.
+            </p>
+            <p>
+                Communications staff at the White House and the Chinese embassy in Washington didn’t immediately
+                respond to requests for comment.
+            </p>
+
+            <section>
+                <div class="sticky">
+                    <img src="./1400x-1-02.jpeg" class="stickyImg">
+                    <span class="stickyInfo">relates to China Concealed Extent of Virus Outbreak, U.S. Intelligence
+                        Says</span>
+                </div>
+                <h3 class="article-title">‘More Forthcoming’</h3>
+                <p>
+                    “The reality is that we could have been better off if China had been more forthcoming,” Vice
+                    President Mike Pence said Wednesday on CNN. “What appears evident now is that long before the
+                    world learned in December that China was dealing with this, and maybe as much as a month earlier
+                    than that, that the outbreak was real in China.
+                </p>
+                <p>
+                    While China eventually imposed a strict lockdown beyond those of less autocratic nations, there
+                    has been considerable skepticism toward China’s reported numbers, both outside and within the
+                    country. The Chinese government has repeatedly revised its methodology for counting cases, for
+                    weeks excluding people without symptoms entirely, and only on Tuesday added more than 1,500
+                    asymptomatic cases to its total.
+                </p>
+                <p>Stacks of thousands of urns outside funeral homes in Hubei province have driven public doubt in
+                    Beijing’s reporting.
+                </p>
+                <p>Republican lawmakers in the U.S. have been particularly harsh about China’s role in the outbreak.
+                    Enhancing Beijing’s role in the pandemic could be politically helpful to Trump, who has sought to
+                    shift blame for the U.S. outbreak away from his administration’s delays in achieving widespread
+                    testing for the virus and mobilizing greater production of supplies such as face masks and hospital
+                    ventilators.
+
+                </p>
+            </section>
+                <p>
+                    “The claim that the United States has more coronavirus deaths than China is false,” Senator Ben
+                    Sasse, a Nebraska Republican, said in a statement after Bloomberg News published its report.
+                    “Without commenting on any classified information, this much is painfully obvious: The Chinese
+                    Communist Party has lied, is lying, and will continue to lie about coronavirus to protect the
+                    regime.”
+                </p>
+                <p>Deborah Birx, the State Department immunologist advising the White House on its response to the outbreak, said Tuesday that China’s public reporting influenced assumptions elsewhere in the world about the nature of the virus.
+
+                </p>
+                <p>
+                    .</p>
+                <p>.</p>
+                <p>.
+                </p>
+
+            <p>source:
+                <a href="https://www.bloomberg.com/news/articles/2020-04-01/china-concealed-extent-of-virus-outbreak-u-s-intelligence-says"
+                    target="_blank" rel="noopener noreferrer nofollow">
+                    https://www.bloomberg.com/news/articles/2020-04-01/china-concealed-extent-of-virus-outbreak-u-s-intelligence-says</a>
+            </p>
+        </article>
+    </main>
+    <footer>
+        only test for desktop<br>
+        jquery, css...
+    </footer>
+
+</body>
+<script>
+    $(function () {
+
+        const headerTitle = $('.headerTitle');
+        const header = $('header');
+        header.height($(window).height());
+        const headerTitleDefaultTop = headerTitle.position().top;
+        const headerHeight = header.height();
+        const headerTitleHeightPercentage = headerTitleDefaultTop / headerHeight * 100;
+
+        handleHeaderImg = scrollTop => {
+            const offsetBlur = scrollTop / 250;
+            const offestOpacity = 1 - (scrollTop / 700);
+            const offsetHeaderHeightPercentage = ((scrollTop / 1.5 + headerTitleDefaultTop) / headerHeight * 100);
+
+            headerTitle.css('top', `${(offsetHeaderHeightPercentage > 85
+                ? 85
+                : offsetHeaderHeightPercentage)}%`);
+
+            $('.headerImg').css({
+                transform: 'translate3d(-50%, -' + (scrollTop / 100) + '%, 0) scale(' + (100 +
+                    scrollTop / 5) / 100 + ')',
+                filter: `blur(${offsetBlur}px) opacity(${offestOpacity})`,
+            });
+        }
+
+        const sticky = $('.sticky');
+        const stickyDefaultWidth = sticky.width();
+        const max = 300;
+        handleStickyImg = scrollTop => {
+            const offsetScrollTop = (scrollTop <= 0) ? 0 : scrollTop / 6;
+            if ((stickyDefaultWidth + offsetScrollTop) <= max) {
+                sticky.width(stickyDefaultWidth + offsetScrollTop);
+            } else {
+                sticky.width(max);
+            }
+        }
+
+        $(window).scroll(function () {
+            const scrollTop = $(window).scrollTop();
+            handleHeaderImg(scrollTop);
+            handleStickyImg(scrollTop);
+        });
+    });
+
+</script>
+
+</html>
