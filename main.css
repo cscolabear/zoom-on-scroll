@@ -23,17 +23,21 @@ header {
   width: 100%;
 
 	transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-filter-transform: translateX(-50%);
 
   filter: blur(0) opacity(0.9);
   -webkit-filter: blur(0) opacity(0.9);
+  -moz-filter: blur(0) opacity(0.9);
 }
 
 .headerTitle {
   position: absolute;
   top: 30%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
   font-size: 4.5rem;
   font-weight: 900;
   margin: 0;
@@ -62,13 +66,13 @@ footer {
 
 .sticky {
   z-index: -1;
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
   height: 0;
   width: 100px;
   top: 30%;
   left: 70%;
-  /* margin: 0 auto; */
 }
 
 .stickyImg {

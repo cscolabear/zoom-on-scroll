@@ -172,10 +172,17 @@
                     : offsetHeaderHeightPercentage)}%`
             }, 0);
 
-            // headerImg.css({
-            //     transform: `translate3d(-50%, -${(scrollTop / 100)}%, 0) scale(${(100 + scrollTop  / 5) / 100})`,
-            //     filter: `blur(${offsetBlur}px) opacity(${offestOpacity})`,
-            // });
+            const transform = `translate3d(-50%, -${(scrollTop / 100)}%, 0) scale(${(100 + scrollTop  / 5) / 100})`;
+            const opacity = `opacity(${offestOpacity})`;
+            // const opacity = `blur(${offsetBlur}px) opacity(${offestOpacity})`
+            headerImg.css({
+                transform: transform,
+                "-webkit-transform": transform,
+                "-moz-transform": transform,
+                filter: opacity,
+                "-webkit-filter": opacity,
+                "-moz-filter": opacity,
+            });
         }
 
         const sticky = $('.sticky');
