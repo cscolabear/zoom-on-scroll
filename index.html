@@ -142,14 +142,17 @@
     <footer>
         only test for desktop<br>
         jquery, css...<br>
-        demo: <a href="https://cscolabear.github.io/zoom-on-scroll/">https://cscolabear.github.io/zoom-on-scroll/</a><br>
-        github source: <a href="https://github.com/cscolabear/zoom-on-scroll" target="_blank">https://github.com/cscolabear/zoom-on-scroll</a>
+        demo: <a
+            href="https://cscolabear.github.io/zoom-on-scroll/">https://cscolabear.github.io/zoom-on-scroll/</a><br>
+        github source: <a href="https://github.com/cscolabear/zoom-on-scroll"
+            target="_blank">https://github.com/cscolabear/zoom-on-scroll</a>
     </footer>
 
 </body>
 <script>
     $(function () {
 
+        const headerImg = $('.headerImg');
         const headerTitle = $('.headerTitle');
         const header = $('header');
         header.height($(window).height());
@@ -163,15 +166,16 @@
             const offsetHeaderHeightPercentage = ((scrollTop / 1.5 + headerTitleDefaultTop) / headerHeight *
                 100);
 
-            headerTitle.css('top', `${(offsetHeaderHeightPercentage > 85
-                ? 85
-                : offsetHeaderHeightPercentage)}%`);
+            headerTitle.animate({
+                top: `${(offsetHeaderHeightPercentage > 90
+                    ? 90
+                    : offsetHeaderHeightPercentage)}%`
+            }, 0);
 
-            $('.headerImg').css({
-                transform: 'translate3d(-50%, -' + (scrollTop / 100) + '%, 0) scale(' + (100 +
-                    scrollTop / 5) / 100 + ')',
-                filter: `blur(${offsetBlur}px) opacity(${offestOpacity})`,
-            });
+            // headerImg.css({
+            //     transform: `translate3d(-50%, -${(scrollTop / 100)}%, 0) scale(${(100 + scrollTop  / 5) / 100})`,
+            //     filter: `blur(${offsetBlur}px) opacity(${offestOpacity})`,
+            // });
         }
 
         const sticky = $('.sticky');
